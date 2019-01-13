@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>After</key>
+			<string>preview-result</string>
+			<key>Image File</key>
+			<string>currency.png</string>
+			<key>Script Interpreter</key>
+			<string>/usr/bin/php</string>
+			<key>Shell Script File</key>
+			<string>main.php</string>
+			<key>Title</key>
+			<dict>
+				<key>en</key>
+				<string>Currency Converter</string>
+				<key>ja</key>
+				<string>通貨換算</string>
+			</dict>
+			<key>Regular Expression</key>
+			<string>^[$€¥£₽₹₩R฿₱₺₺]\s{0,}[0-9\,]{0,15}\.{0,1}[0-9]{1,15}$</string>
+		</dict>
+	</array>
+	<key>Extension Description</key>
+	<dict>
+		<key>en</key>
+		<string>Convert Currency.</string>
+		<key>ja</key>
+		<string>通貨を換算します。</string>
+	</dict>
+	<key>Extension Identifier</key>
+	<string>space.ayame.popclip-extension.currency-converter</string>
+	<key>Extension Name</key>
+	<dict>
+		<key>en</key>
+		<string>Currency Converter</string>
+		<key>ja</key>
+		<string>通貨換算</string>
+	</dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Option Identifier</key>
+			<string>currency</string>
+			<key>Option Label</key>
+			<dict>
+				<key>en</key>
+				<string>Currency</string>
+				<key>ja</key>
+				<string>換算先通貨</string>
+			</dict>
+			<key>Option Type</key>
+			<string>multiple</string>
+			<key>Option Values</key>
+			<array>
+				<string>USD</string>
+				<string>EUR</string>
+				<string>JPY</string>
+				<string>GBP</string>
+				<string>CAD</string>
+				<string>AUD</string>
+				<string>CNY</string>
+				<string>RUB</string>
+				<string>BRL</string>
+				<string>INR</string>
+				<string>KRW</string>
+				<string>TWD</string>
+				<string>NZD</string>
+				<string>HKD</string>
+				<string>THB</string>
+				<string>PHP</string>
+				<string>ZAR</string>
+				<string>TRY</string>
+				<string>NGN</string>
+				<string>SGD</string>
+				<string>MXN</string>
+			</array>
+			<key>Option Default Value</key>
+			<string>USD</string>
+		</dict>
+		<dict>
+			<key>Option Identifier</key>
+			<string>fee</string>
+			<key>Option Label</key>
+			<dict>
+				<key>en</key>
+				<string>Exchange fee(%)</string>
+				<key>ja</key>
+				<string>為替手数料(%)</string>
+			</dict>
+			<key>Option Type</key>
+			<string>string</string>
+			<key>Option Default Value</key>
+			<string>0</string>
+		</dict>
+		
+		<dict>
+			<key>Option Identifier</key>
+			<string>dollar</string>
+			<key>Option Label</key>
+			<string>$</string>
+			<key>Option Type</key>
+			<string>multiple</string>
+			<key>Option Values</key>
+			<array>
+				<string>USD</string>
+				<string>CAD</string>
+				<string>AUD</string>
+				<string>BRL</string>
+				<string>HKD</string>
+				<string>NZD</string>
+				<string>SGD</string>
+				<string>TWD</string>
+				<string>MXN</string>
+			</array>
+			<key>Option Default Value</key>
+			<string>USD</string>
+		</dict>
+		<dict>
+			<key>Option Identifier</key>
+			<string>yen</string>
+			<key>Option Label</key>
+			<string>¥</string>
+			<key>Option Type</key>
+			<string>multiple</string>
+			<key>Option Values</key>
+			<array>
+				<string>JPY</string>
+				<string>CNY</string>
+			</array>
+			<key>Option Default Value</key>
+			<string>JPY</string>
+		</dict>
+	</array>
+</dict>
+</plist>
