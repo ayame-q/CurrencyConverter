@@ -21,7 +21,7 @@
 				<string>通貨換算</string>
 			</dict>
 			<key>Regular Expression</key>
-			<string>^[$€¥£₽₹₩R฿₱₺₺]\s{0,}[0-9\,]{0,15}\.{0,1}[0-9]{1,15}$</string>
+			<string>^[$€¥£₽₹₩R฿₱₺₦]\s{0,}[0-9\,]{0,15}\.{0,1}[0-9]{1,15}$</string>
 		</dict>
 	</array>
 	<key>Extension Description</key>

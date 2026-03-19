@@ -3,7 +3,7 @@
 import json
 import os
 import sys
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from urllib.error import URLError, HTTPError
 from urllib.request import urlopen
 
@@ -21,6 +21,12 @@ if not text:
 
 frommark = text[:1]
 price = text[1:].replace(",", "")
+
+try:
+    price_decimal = Decimal(price)
+    fee_decimal = Decimal(fee)
+except InvalidOperation:
+    sys.exit(0)
 
 if frommark == "$":
     from_currency = env("POPCLIP_OPTION_DOLLAR").lower()
@@ -44,7 +50,7 @@ elif frommark == "₱":
     from_currency = "php"
 elif frommark == "₺":
     from_currency = "try"
-elif frommark == "₺":
+elif frommark == "₦":
     from_currency = "ngn"
 else:
     sys.exit(0)
@@ -73,7 +79,7 @@ elif to == "JPY":
     tomark = "¥"
     digit = 0
 elif to == "GBP":
-    tomark = "€"
+    tomark = "£"
     digit = 2
 elif to == "CAD":
     tomark = "$"
@@ -118,7 +124,7 @@ elif to == "TRY":
     tomark = "₺"
     digit = 2
 elif to == "NGN":
-    tomark = "₺"
+    tomark = "₦"
     digit = 2
 elif to == "SGD":
     tomark = "$"
@@ -129,9 +135,7 @@ elif to == "MXN":
 else:
     sys.exit(0)
 
-price_decimal = Decimal(price)
 base_decimal = Decimal(str(base))
-fee_decimal = Decimal(fee)
 total = price_decimal * base_decimal + price_decimal * base_decimal * fee_decimal * Decimal("0.01")
 
 if digit == 0:
