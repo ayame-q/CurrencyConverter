@@ -10,9 +10,9 @@
 			<key>Image File</key>
 			<string>currency.png</string>
 			<key>Script Interpreter</key>
-			<string>/usr/bin/php</string>
+			<string>/usr/bin/python3</string>
 			<key>Shell Script File</key>
-			<string>main.php</string>
+			<string>main.py</string>
 			<key>Title</key>
 			<dict>
 				<key>en</key>
